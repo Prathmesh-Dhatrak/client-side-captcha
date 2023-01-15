@@ -27,16 +27,13 @@ export default function App() {
   const [password, setPassword] = useState("");
 
   const handleSubmitForm = () => {
-    console.log(name);
-    console.log(email);
-    console.log(password);
+    console.log("name : " + name + "\nemail : " + email + "\npassword : " + password);
     console.log("Form submitted");
     setFormSubmitted(true);
   };
 
   const handleResetForm = () => {
     setFormSubmitted(false);
-    // setIsCaptchaValid(false);
     setName("");
     setEmail("");
     setPassword("");
