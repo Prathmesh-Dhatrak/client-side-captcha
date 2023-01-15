@@ -10,6 +10,7 @@ import {
   Button,
   Heading,
   useColorModeValue,
+  Text,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
@@ -62,16 +63,14 @@ export default function App() {
         >
           {formSubmitted ? (
             <Stack spacing={4}>
-              <div className="py-4 mx-8 shadow-xl rounded-lg">
-                <h3 className="text-xl text-center font-semibold dark:text-white">
-                  Your form was submitted successfully 🎉
-                </h3>
-                <div className="container mt-2 flex justify-center">
-                  <button className="btn" onClick={handleResetForm}>
-                    Reset form
-                  </button>
-                </div>
-              </div>
+              <Box py={4} mx={8}>
+                <Text fontSize={"xl"} align={"center"} fontWeight={"semibold"}>
+                  Your submission was successfully completed
+                </Text>
+                <Box my={2} display={"flex"} justifyContent={"center"}>
+                  <Button onClick={handleResetForm}>Reset</Button>
+                </Box>
+              </Box>
             </Stack>
           ) : (
             <Stack spacing={4} justifyContent={"center"} alignItems={"center"}>
